@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title description" xml:lang="en">
+<title id="title">Learn first, then send separately</title><desc id="description">Learning schematic: point the original remote emitter at the R16 top center, less than one centimeter away. Start, wait for ready, press briefly, validate and save; test sending separately. Not to scale.</desc>
+<defs><filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#183C63" flood-opacity=".05"/></filter>
+<marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1L8 5L1 9" fill="none" stroke="#326CE5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1L8 5L1 9" fill="none" stroke="#087F8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1L8 5L1 9" fill="none" stroke="#A86212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs><style>text {font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;}</style>
+<rect width="1200" height="650" rx="28" fill="#F4F7FB"/>
+<text x="44" y="48" font-size="30" fill="#172B43" font-weight="700" text-anchor="start" data-max-width="1112">Learn first, then send separately</text>
+<text x="44" y="82" font-size="18" fill="#52667E" font-weight="500" text-anchor="start" data-max-width="1112">The ready prompt sets the timing; a complete, validated capture is saved</text>
+<rect x="40" y="110" width="1120" height="284" rx="22" fill="white" stroke="#DBE4ED" filter="url(#shadow)"/>
+<rect x="180" y="124" width="92" height="158" rx="18" fill="#263D56" stroke="#263D56" />
+<rect x="197" y="140" width="58" height="20" rx="6" fill="#183047" stroke="#183047" />
+<circle cx="205" cy="184" r="9" fill="#70859C"/>
+<circle cx="247" cy="184" r="9" fill="#70859C"/>
+<circle cx="205" cy="218" r="9" fill="#70859C"/>
+<circle cx="247" cy="218" r="9" fill="#70859C"/>
+<circle cx="205" cy="251" r="9" fill="#70859C"/>
+<circle cx="247" cy="251" r="9" fill="#70859C"/>
+<rect x="214" y="278" width="24" height="10" rx="3" fill="#D08B32" stroke="#D08B32" />
+<path d="M155 190 L172 190" fill="none" stroke="#91A4B9" stroke-width="2" stroke-linecap="round" />
+<text x="64" y="197" font-size="18" fill="#52667E" font-weight="500" text-anchor="start" data-max-width="104">IR remote</text>
+<ellipse cx="226" cy="344" rx="92" ry="16" fill="#D3DFE9"/>
+<path d="M134 321V344C134 366 318 366 318 344V321" fill="#E4EDF5" stroke="#9DB0C4" stroke-width="2"/>
+<ellipse cx="226" cy="321" rx="92" ry="20" fill="#FCFDFF" stroke="#9DB0C4" stroke-width="2"/>
+<circle cx="226" cy="319" r="6" fill="#52667E"/>
+<path d="M226 294 L226 308" fill="none" stroke="#A86212" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-amber)"/>
+<path d="M330 289 L330 319" fill="none" stroke="#A86212" stroke-width="2" stroke-linecap="round" />
+<path d="M324 289 L336 289" fill="none" stroke="#A86212" stroke-width="2" stroke-linecap="round" />
+<path d="M324 319 L336 319" fill="none" stroke="#A86212" stroke-width="2" stroke-linecap="round" />
+<text x="344" y="313" font-size="24" fill="#A86212" font-weight="700" text-anchor="start" data-max-width="116">&lt; 1 cm</text>
+<text x="226" y="382" font-size="17" fill="#52667E" font-weight="500" text-anchor="middle" data-max-width="290">R16 top-center receiver</text>
+<text x="486" y="178" font-size="26" fill="#172B43" font-weight="650" text-anchor="start" data-max-width="620">Aim at the top-center receiver</text>
+<text x="486" y="222" font-size="21" fill="#52667E" font-weight="500" text-anchor="start" data-max-width="620">Keep the emitter less than 1 cm away.</text>
+<rect x="486" y="248" width="610" height="44" rx="12" fill="#EDF4FF" stroke="#EDF4FF" />
+<text x="504" y="277" font-size="20" fill="#326CE5" font-weight="600" text-anchor="start" data-max-width="574">Wait for the ready prompt, then press briefly.</text>
+<text x="486" y="337" font-size="17" fill="#52667E" font-weight="500" text-anchor="start" data-max-width="620">Illustration, not a hardware photo; not to scale.</text>
+<rect x="40" y="426" width="336" height="142" rx="22" fill="white" stroke="#DBE4ED" />
+<g transform="translate(83 469) scale(0.72)"><circle cx="0" cy="0" r="27" fill="#EAF1FF"/><path d="M-6-12L13 0L-6 12Z" fill="#326CE5"/></g>
+<text x="121" y="476" font-size="23" fill="#172B43" font-weight="650" text-anchor="start" data-max-width="235">Start learning</text>
+<text x="64" y="531" font-size="18" fill="#52667E" font-weight="500" text-anchor="start" data-max-width="288">Choose device and button.</text>
+<path d="M390 494 L418 494" fill="none" stroke="#326CE5" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<rect x="432" y="426" width="336" height="142" rx="22" fill="white" stroke="#DBE4ED" />
+<g transform="translate(475 469) scale(0.72)"><circle cx="0" cy="0" r="27" fill="#E2F4EE"/><path d="M-13 0L-3 10L15-11" fill="none" stroke="#087F8C" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="513" y="476" font-size="23" fill="#172B43" font-weight="650" text-anchor="start" data-max-width="235">Wait, then press</text>
+<text x="456" y="531" font-size="18" fill="#52667E" font-weight="500" text-anchor="start" data-max-width="288">Press after the ready prompt.</text>
+<path d="M782 494 L810 494" fill="none" stroke="#326CE5" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<rect x="824" y="426" width="336" height="142" rx="22" fill="white" stroke="#DBE4ED" />
+<g transform="translate(867 469) scale(0.72)"><rect x="-24" y="-24" width="48" height="48" rx="8" fill="#EAF1FF" stroke="#326CE5" stroke-width="2"/><path d="M-12-24V-6H11V-24M-13 24V7H13V24" fill="white" stroke="#326CE5" stroke-width="2"/><path d="M4-20V-10" stroke="#9BBBEF" stroke-width="5"/></g>
+<text x="905" y="476" font-size="23" fill="#172B43" font-weight="650" text-anchor="start" data-max-width="235">Validate &amp; save</text>
+<text x="848" y="531" font-size="18" fill="#52667E" font-weight="500" text-anchor="start" data-max-width="288">Send separately to test.</text>
+<text x="600" y="613" font-size="20" fill="#087F8C" font-weight="600" text-anchor="middle" data-max-width="1100">Learning saves a command. Sending is a separate action.</text>
+</svg>

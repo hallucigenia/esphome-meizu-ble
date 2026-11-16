@@ -13,6 +13,10 @@ ESPHome handles Bluetooth, Wi-Fi, encrypted native API and OTA updates.
 **Experimental release:** component **0.1.0**, HA adapter **1.5.0**.
 [Download v0.1.0](https://github.com/hallucigenia/esphome-meizu-ble/releases/tag/v0.1.0)
 
+[![How HA, ESP32, the R16 and an infrared appliance connect](docs/images/connection-en.png)](docs/images/connection-en.png)
+
+*Connection overview. Hardware drawings are schematic. Click a diagram to enlarge it.*
+
 ## Features
 
 - **Sensor readings:** temperature, humidity, estimated battery level, battery
@@ -37,6 +41,8 @@ Use a dedicated `ble_client` for each puck, with `auto_connect: false`. Keep oth
 phones or gateways from holding a competing Bluetooth connection to that puck.
 
 ## Install the ESPHome component
+
+[![Configure YAML, install firmware and optionally connect Home Assistant](docs/images/setup-en.png)](docs/images/setup-en.png)
 
 1. Start with the [complete ESP32 configuration](examples/esphome-meizu.yaml).
    It uses a local component path when cloned. If copying it into ESPHome Device
@@ -88,6 +94,8 @@ Install the optional adapter for the learning wizard and named commands:
    status roundtrip; it does not transmit infrared.
 
 ### Learn a button
+
+[![Aim within one centimeter of the top-center receiver, wait for ready, then press and save](docs/images/learning-en.png)](docs/images/learning-en.png)
 
 Open the Meizu integration's **Configure** wizard and name the device and button.
 Point the original remote at the center of the puck's top surface, less than

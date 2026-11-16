@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img" aria-labelledby="title description" xml:lang="en">
+<title id="title">Configure, install, then connect Home Assistant</title><desc id="description">Setup schematic: configure YAML and secrets, install on ESP32, add its ESPHome node to HA and optionally add the Meizu adapter.</desc>
+<defs><filter id="shadow" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="5" stdDeviation="8" flood-color="#183C63" flood-opacity=".05"/></filter>
+<marker id="arrow-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1L8 5L1 9" fill="none" stroke="#326CE5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="arrow-teal" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1L8 5L1 9" fill="none" stroke="#087F8C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="arrow-amber" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M1 1L8 5L1 9" fill="none" stroke="#A86212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs><style>text {font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;}</style>
+<rect width="1200" height="500" rx="28" fill="#F4F7FB"/>
+<text x="44" y="48" font-size="30" fill="#172B43" font-weight="700" text-anchor="start" data-max-width="1112">Configure, install, then connect Home Assistant</text>
+<text x="44" y="82" font-size="18" fill="#52667E" font-weight="500" text-anchor="start" data-max-width="1112">First installation over USB; later updates through ESPHome OTA</text>
+<rect x="40" y="126" width="336" height="250" rx="22" fill="white" stroke="#DBE4ED" filter="url(#shadow)"/>
+<rect x="58" y="144" width="40" height="30" rx="10" fill="#EDF3FC" stroke="#EDF3FC" />
+<text x="78" y="165" font-size="16" fill="#326CE5" font-weight="700" text-anchor="middle" data-max-width="36">01</text>
+<g transform="translate(208 201) scale(0.9)"><rect x="-47" y="-37" width="94" height="74" rx="10" fill="#EDF4FF" stroke="#A8C3EF" stroke-width="2"/><path d="M-20-12L-32 0L-20 12M20-12L32 0L20 12M7-18L-7 18" fill="none" stroke="#326CE5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="208" y="282" font-size="24" fill="#172B43" font-weight="650" text-anchor="middle" data-max-width="288">Configure YAML</text>
+<text x="208" y="322" font-size="18" fill="#52667E" font-weight="500" text-anchor="middle" data-max-width="288">Board · MAC · secrets</text>
+<path d="M390 249 L418 249" fill="none" stroke="#326CE5" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<rect x="432" y="126" width="336" height="250" rx="22" fill="white" stroke="#DBE4ED" filter="url(#shadow)"/>
+<rect x="450" y="144" width="40" height="30" rx="10" fill="#EDF3FC" stroke="#EDF3FC" />
+<text x="470" y="165" font-size="16" fill="#326CE5" font-weight="700" text-anchor="middle" data-max-width="36">02</text>
+<g transform="translate(600 201) scale(0.9)"><rect x="-37" y="-44" width="74" height="88" rx="10" fill="#1E4D58"/><rect x="-20" y="-8" width="40" height="34" rx="5" fill="#BBD4D8"/><path d="M-25-30H-13V-21H-1V-30H11V-21H24" fill="none" stroke="#9DD4CD" stroke-width="4"/><path d="M-43-18H-37M-43-3H-37M-43 12H-37M-43 27H-37M37-18H43M37-3H43M37 12H43M37 27H43" stroke="#A0B7BE" stroke-width="5"/><rect x="-13" y="35" width="26" height="17" rx="4" fill="#8298A8"/><rect x="-8" y="43" width="16" height="5" rx="2" fill="#334C61"/><circle cx="-26" cy="-10" r="3" fill="#8EE3A0"/></g>
+<text x="600" y="282" font-size="24" fill="#172B43" font-weight="650" text-anchor="middle" data-max-width="288">Install firmware</text>
+<text x="600" y="322" font-size="18" fill="#52667E" font-weight="500" text-anchor="middle" data-max-width="288">USB first, then OTA</text>
+<path d="M782 249 L810 249" fill="none" stroke="#326CE5" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+<rect x="824" y="126" width="336" height="250" rx="22" fill="white" stroke="#DBE4ED" filter="url(#shadow)"/>
+<rect x="842" y="144" width="40" height="30" rx="10" fill="#EDF3FC" stroke="#EDF3FC" />
+<text x="862" y="165" font-size="16" fill="#326CE5" font-weight="700" text-anchor="middle" data-max-width="36">03</text>
+<g transform="translate(992 201) scale(0.9)"><path d="M-38 0L0-33L38 0M-28-8V34H28V-8" fill="#EDF4FF" stroke="#326CE5" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><rect x="-8" y="10" width="16" height="24" rx="3" fill="#326CE5"/><rect x="-18" y="-6" width="11" height="11" rx="2" fill="#9DBCF9"/><rect x="7" y="-6" width="11" height="11" rx="2" fill="#9DBCF9"/></g>
+<text x="992" y="282" font-size="24" fill="#172B43" font-weight="650" text-anchor="middle" data-max-width="288">Connect HA (optional)</text>
+<text x="992" y="322" font-size="18" fill="#52667E" font-weight="500" text-anchor="middle" data-max-width="288">Node → optional adapter</text>
+<rect x="40" y="410" width="1120" height="58" rx="18" fill="#FFFFFF" stroke="#DBE4ED" />
+<text x="600" y="446" font-size="20" fill="#087F8C" font-weight="600" text-anchor="middle" data-max-width="1060">Each puck: dedicated BLE client with auto_connect: false</text>
+</svg>

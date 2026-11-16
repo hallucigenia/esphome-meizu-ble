@@ -8,6 +8,10 @@
 
 **实验版本：**组件 **0.1.0**，HA 适配 **1.5.0**。查看 [v0.1.0 发布页](https://github.com/hallucigenia/esphome-meizu-ble/releases/tag/v0.1.0)。
 
+[![HA、ESP32、R16 与红外设备的连接关系](docs/images/connection-zh-CN.png)](docs/images/connection-zh-CN.png)
+
+*连接原理示意，设备外观为示意绘制；点击图片可放大。*
+
 ## 功能
 
 - **传感器：**温度、湿度、估算电量、电池电压、蓝牙信号、样本年龄和测量可用性。
@@ -27,6 +31,8 @@
 每只小圆饼使用独立的 `ble_client`，并设置 `auto_connect: false`。使用期间，避免手机或其它网关持续占用同一只小圆饼的蓝牙连接。
 
 ## 安装 ESPHome 组件
+
+[![配置 YAML、安装固件，再按需接入 Home Assistant](docs/images/setup-zh-CN.png)](docs/images/setup-zh-CN.png)
 
 1. 从[完整 ESP32 配置](examples/esphome-meizu.yaml)开始。克隆仓库时，示例使用本地组件路径；若复制到 ESPHome Device Builder，请将其中的 `external_components` 替换为已发布的版本：
 
@@ -61,6 +67,8 @@ HA 的标准 ESPHome 集成提供传感器和固件更新。需要学习向导�
    动作名以 HA 开发者工具中的实际名称为准。配置时只验证一次状态往返，不发射红外。
 
 ### 学习按键
+
+[![对准顶部中心、距离小于一厘米，等就绪后按键，校验保存后另行试发](docs/images/learning-zh-CN.png)](docs/images/learning-zh-CN.png)
 
 在魅族集成的「**配置**」中打开逐键向导，填写设备名与按键名。把原遥控器发射头对准小圆饼顶部中心，距离小于 1 厘米；**等到就绪提示后，再短按按键。**
 
