@@ -1,0 +1,78 @@
+bind:
+  name: 绑定魅族遥控器
+  description: 开启短时绑定模式；把有电的魅族遥控器贴近 ESP32 网关。
+  fields:
+    serial_no:
+      required: true
+      selector:
+        text:
+cancel_learning:
+  name: 取消红外学习
+  description: 停止此网关正在进行的学习，保留已保存的按键。
+  fields:
+    serial_no:
+      required: true
+      selector:
+        text:
+set_update_interval:
+  name: 设置温湿度轮询间隔
+  fields:
+    serial_no:
+      required: true
+      selector:
+        text:
+    update_interval:
+      required: true
+      selector:
+        number:
+          min: 1
+          max: 30
+          unit_of_measurement: min
+send_ir:
+  name: 发送魅族红外码
+  description: 增强固件等待小圆饼蓝牙应答，旧固件仅确认 TCP 写入；不推断 HDMI 实际输入。
+  fields:
+    serial_no:
+      required: true
+      selector:
+        text:
+    address:
+      required: true
+      selector:
+        text:
+    key:
+      required: true
+      selector:
+        text:
+    ir_code:
+      selector:
+        text:
+store_command:
+  name: 保存红外按键
+  description: 保存从魅家 App 或串口采集的 key 和 ir_code；保存本身不发射红外。
+  fields:
+    serial_no:
+      required: true
+      selector:
+        text:
+    address:
+      required: true
+      selector:
+        text:
+    device:
+      required: true
+      example: hdmi_switch
+      selector:
+        text:
+    command:
+      required: true
+      example: input_1
+      selector:
+        text:
+    key:
+      required: true
+      selector:
+        text:
+    ir_code:
+      selector:
+        text:

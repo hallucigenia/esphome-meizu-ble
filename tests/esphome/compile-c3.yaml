@@ -1,0 +1,6 @@
+packages:
+  common: !include compile.yaml
+esphome:
+  name: meizu-c3-compile-test
+esp32:
+  board: seeed_xiao_esp32c3

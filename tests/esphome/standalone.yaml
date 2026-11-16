@@ -1,0 +1,33 @@
+esphome:
+  name: meizu-standalone-compile
+  min_version: 2026.10.2
+esp32:
+  board: esp32dev
+  framework:
+    type: esp-idf
+external_components:
+  - source:
+      type: local
+      path: ../../components
+    components: [meizu_ble]
+logger:
+esp32_ble_tracker:
+ble_client:
+  - id: standalone_client
+    mac_address: "02:00:00:00:00:02"
+    auto_connect: false
+meizu_ble:
+  - id: standalone_puck
+    ble_client_id: standalone_client
+    temperature:
+      name: Temperature
+    on_event:
+      - lambda: |-
+          ESP_LOGD("standalone", "%s", event.phase.c_str());
+script:
+  - id: offline_learn
+    then:
+      - meizu_ble.learn:
+          id: standalone_puck
+          request_id: standalone-learning
+          device: tv

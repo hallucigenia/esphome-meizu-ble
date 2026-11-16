@@ -1,0 +1,17 @@
+{
+  "domain": "meizu_remoter_gateway",
+  "name": "魅族蓝牙网关",
+  "version": "1.5.0",
+  "config_flow": true,
+  "documentation": "https://github.com/hallucigenia/esphome-meizu-ble/blob/main/custom_components/meizu_remoter_gateway/README.md",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": [
+    "@hallucigenia"
+  ],
+  "iot_class": "local_push",
+  "after_dependencies": [
+    "esphome"
+  ],
+  "issue_tracker": "https://github.com/hallucigenia/esphome-meizu-ble/issues"
+}

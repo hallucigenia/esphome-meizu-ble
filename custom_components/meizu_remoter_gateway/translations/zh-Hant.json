@@ -1,0 +1,110 @@
+{
+  "title": "魅族藍牙閘道器",
+  "config": {
+    "step": {
+      "user": {
+        "title": "接入魅族小圆饼",
+        "menu_options": {
+          "tcp": "TCP 网关",
+          "esphome": "ESPHome 蓝牙组件"
+        }
+      },
+      "reconfigure": {
+        "title": "选择连接方式",
+        "menu_options": {
+          "tcp_reconfigure": "TCP 网关",
+          "esphome": "ESPHome 蓝牙组件"
+        }
+      },
+      "tcp": {
+        "title": "連線魅族 ESP32 閘道器",
+        "description": "输入运行魅族专用閘道器固件的 ESP32 位址。",
+        "data": {
+          "host": "IP 位址",
+          "port": "TCP 端口"
+        }
+      },
+      "tcp_reconfigure": {
+        "title": "网关连接与固件升级",
+        "description": "OTA 密钥通过 USB 串口输入 ota-key 读取。留空保留已保存的密钥；提交时会验证，不会发射或升级。",
+        "data": {
+          "host": "IP 地址",
+          "port": "TCP 端口",
+          "ota_key": "OTA 升级密钥"
+        }
+      },
+      "esphome": {
+        "title": "通过 ESPHome 接入",
+        "description": "先添加 ESPHome 节点，再填写其动作名（不含 esphome.）、组件 api_service 名和小圆饼蓝牙 MAC。本表单只读取状态，不发送红外。",
+        "data": {
+          "esphome_device_id": "ESPHome 设备",
+          "esphome_service": "ESPHome 动作名",
+          "api_source": "组件 api_service",
+          "address": "小圆饼蓝牙 MAC"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "无法連線魅族閘道器，請檢查位址、固件和网络。",
+      "cannot_authenticate": "无法连接或验证 OTA 密钥，请检查网关地址与密钥。",
+      "cannot_connect_esphome": "未收到匹配的 ESPHome 状态回报。请核对设备、动作、api_service 与小圆饼 MAC。"
+    },
+    "abort": {
+      "already_configured": "此閘道器已经接入。",
+      "wrong_gateway": "此地址对应另一台网关，请检查地址。",
+      "reconfigure_successful": "网关配置已更新。"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "學習紅外線按鍵",
+        "description": "把原遙控器的發射頭對準小圓餅頂部中心，距離小於 1 公分。填好名稱後提交；等畫面提示「請按鍵」再短按。儲存不會發射紅外線。",
+        "data": {
+          "address": "小圓餅",
+          "device": "裝置名",
+          "command": "按鍵名",
+          "replace": "覆寫已儲存的同名按鍵"
+        }
+      },
+      "result": {
+        "title": "{command}",
+        "description": "{result}",
+        "data": {
+          "action": "下一步"
+        }
+      }
+    },
+    "progress": {
+      "connecting": "正在連線小圓餅並準備學習「{command}」，請稍候。",
+      "listening": "現在請短按「{command}」。保持對準頂部中心，距離小於 1 公分，剩餘約 {remaining} 秒。",
+      "receiving": "已收到「{command}」的紅外線訊號，正在接收和校驗，請停止按鍵。"
+    },
+    "error": {
+      "invalid_name": "請填寫 1–80 個字元的裝置名和按鍵名。",
+      "already_saved": "此按鍵已存在；如要重新學習，請勾選覆寫。"
+    },
+    "abort": {
+      "learning_unsupported": "目前閘道器韌體尚不支援原生學碼，請升級到 0.6.0 或更新版本。",
+      "gateway_unavailable": "請先連線閘道器並綁定小圓餅。",
+      "learning_busy": "此閘道器正在學習另一按鍵，請結束後重試。"
+    }
+  },
+  "selector": {
+    "learn_action": {
+      "options": {
+        "next": "學習下一键",
+        "test": "試發已儲存按鍵",
+        "retry": "重新學習本键",
+        "finish": "結束"
+      }
+    }
+  },
+  "entity": {
+    "update": {
+      "firmware": {
+        "name": "韌體"
+      }
+    }
+  }
+}

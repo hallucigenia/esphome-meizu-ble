@@ -1,0 +1,67 @@
+esphome:
+  name: meizu-compile-test
+  min_version: 2026.10.2
+esp32:
+  board: esp32dev
+  framework:
+    type: esp-idf
+external_components:
+  - source:
+      type: local
+      path: ../../components
+    components: [meizu_ble]
+logger:
+api:
+  custom_services: true
+  homeassistant_services: true
+ota:
+  - platform: esphome
+wifi:
+  ssid: example-network
+  password: example-password
+esp32_ble_tracker:
+ble_client:
+  - id: puck_client
+    mac_address: "02:00:00:00:00:01"
+    auto_connect: false
+meizu_ble:
+  - id: puck
+    ble_client_id: puck_client
+    api_service: meizu_puck
+    temperature:
+      name: Temperature
+    humidity:
+      name: Humidity
+    battery:
+      name: Battery
+    voltage:
+      name: Voltage
+    rssi:
+      name: RSSI
+    sample_age:
+      name: Sample Age
+    available:
+      name: Available
+    on_event:
+      - lambda: |-
+          ESP_LOGD("test", "%s", event.phase.c_str());
+script:
+  - id: learn_test
+    then:
+      - meizu_ble.learn:
+          id: puck
+          request_id: synthetic-learn
+          device: tv
+          timeout: 15
+  - id: cancel_test
+    then:
+      - meizu_ble.cancel:
+          id: puck
+          request_id: synthetic-learn
+  - id: send_test
+    then:
+      - meizu_ble.send:
+          id: puck
+          request_id: synthetic-send
+          key: '01001c000000000000'
+          ir_code: '00'

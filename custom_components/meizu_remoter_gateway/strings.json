@@ -1,0 +1,110 @@
+{
+  "title": "Meizu Bluetooth gateway",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect a Meizu puck",
+        "menu_options": {
+          "tcp": "TCP gateway",
+          "esphome": "ESPHome BLE component"
+        }
+      },
+      "reconfigure": {
+        "title": "Choose transport",
+        "menu_options": {
+          "tcp_reconfigure": "TCP gateway",
+          "esphome": "ESPHome BLE component"
+        }
+      },
+      "tcp": {
+        "title": "Connect a Meizu ESP32 gateway",
+        "description": "Enter the IP address and TCP port of the Meizu gateway.",
+        "data": {
+          "host": "IP address",
+          "port": "TCP port"
+        }
+      },
+      "tcp_reconfigure": {
+        "title": "Configure gateway OTA",
+        "description": "Enter the OTA key read through USB with ota-key. Leave it blank to keep the saved key.",
+        "data": {
+          "host": "IP address",
+          "port": "TCP port",
+          "ota_key": "OTA key"
+        }
+      },
+      "esphome": {
+        "title": "Connect through ESPHome",
+        "description": "Add the ESPHome node first. Enter its action name without esphome., the component api_service name, and the puck BLE MAC. No IR is sent by this form.",
+        "data": {
+          "esphome_device_id": "ESPHome device",
+          "esphome_service": "ESPHome action",
+          "api_source": "Component api_service",
+          "address": "Puck BLE MAC"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to connect to the gateway. Check its address, firmware and network.",
+      "cannot_authenticate": "Could not connect or authenticate. Check the gateway address and OTA key.",
+      "cannot_connect_esphome": "No matching ESPHome status response. Check the device, action, api_service and puck MAC."
+    },
+    "abort": {
+      "already_configured": "This gateway is already configured.",
+      "wrong_gateway": "This is a different gateway.",
+      "reconfigure_successful": "Gateway configuration updated."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Learn an infrared command",
+        "description": "Point the original remote at the top centre of the puck, less than 1 cm away. Submit the names, then wait for the prompt to press the button. Saving does not transmit infrared.",
+        "data": {
+          "address": "Puck",
+          "device": "Device name",
+          "command": "Command name",
+          "replace": "Replace an existing command with the same name"
+        }
+      },
+      "result": {
+        "title": "{command}",
+        "description": "{result}",
+        "data": {
+          "action": "Next step"
+        }
+      }
+    },
+    "progress": {
+      "connecting": "Connecting to the puck to learn “{command}”. Please wait.",
+      "listening": "Press “{command}” now. Keep the remote aligned within 1 cm. About {remaining} seconds remain.",
+      "receiving": "Signal received for “{command}”. Stop pressing while the data is received and checked."
+    },
+    "error": {
+      "invalid_name": "Enter a device name and command name of 1–80 characters.",
+      "already_saved": "This command exists. Enable replacement to learn it again."
+    },
+    "abort": {
+      "learning_unsupported": "Update the gateway to firmware 0.6.0 or later to learn commands.",
+      "gateway_unavailable": "Connect the gateway and bind a puck first.",
+      "learning_busy": "Another command is being learned. Finish that session first."
+    }
+  },
+  "selector": {
+    "learn_action": {
+      "options": {
+        "next": "Learn the next command",
+        "test": "Test the saved command",
+        "retry": "Learn this command again",
+        "finish": "Finish"
+      }
+    }
+  },
+  "entity": {
+    "update": {
+      "firmware": {
+        "name": "Firmware"
+      }
+    }
+  }
+}

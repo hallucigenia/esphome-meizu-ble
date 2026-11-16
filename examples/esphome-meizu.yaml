@@ -1,0 +1,57 @@
+esphome:
+  name: meizu-gateway
+  min_version: 2026.10.2
+  compile_process_limit: 1
+
+esp32:
+  board: esp32dev
+  framework:
+    type: esp-idf
+
+external_components:
+  - source:
+      type: local
+      path: ../components
+    components: [meizu_ble]
+
+logger:
+api:
+  custom_services: true
+  homeassistant_services: true
+  encryption:
+    key: !secret api_encryption_key
+ota:
+  - platform: esphome
+    password: !secret ota_password
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+esp32_ble_tracker:
+ble_client:
+  - id: puck_client
+    mac_address: "02:00:00:00:00:01"  # Synthetic example: replace with your puck's BLE MAC.
+    auto_connect: false
+
+meizu_ble:
+  - id: puck
+    ble_client_id: puck_client
+    api_service: meizu_puck
+    update_interval: 5min
+    temperature:
+      name: Puck Temperature
+    humidity:
+      name: Puck Humidity
+    battery:
+      name: Puck Battery
+    voltage:
+      name: Puck Battery Voltage
+    rssi:
+      name: Puck RSSI
+    sample_age:
+      name: Puck Sample Age
+    available:
+      name: Puck Measurement Available
+    on_event:
+      - lambda: |-
+          ESP_LOGD("meizu_example", "%s %s %s", event.operation.c_str(), event.phase.c_str(), event.status.c_str());

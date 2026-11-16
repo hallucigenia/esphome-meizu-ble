@@ -1,0 +1,30 @@
+name: ESPHome Meizu BLE component
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install host-test OpenSSL headers
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libssl-dev
+      - name: Install the supported ESPHome version
+        run: pip install 'esphome==2026.10.2'
+      - name: Production protocol and GATT adapter sanitizer tests; real schema checks
+        run: python -B -m unittest discover -s tests/esphome -v
+      - name: Compile ESP32 with native API bridge
+        run: esphome compile tests/esphome/compile.yaml
+      - name: Compile ESP32-C3 with native API bridge
+        run: esphome compile tests/esphome/compile-c3.yaml
+      - name: Compile without network, API or Home Assistant
+        run: esphome compile tests/esphome/standalone.yaml
